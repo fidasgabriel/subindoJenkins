@@ -1,0 +1,14 @@
+version: "3"
+services:
+  jenkins:
+    container_name: jk_ct_servidor_pratica
+    image: jk_im_servidor:0.1
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - fidas
+networks:
+  fidas:
